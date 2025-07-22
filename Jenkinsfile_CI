@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'dev', url: 'https://github.com/AAKASHDEEP786/3-Tier-DevSecOps-Mega-Project.git'
+                git branch: 'local-dev', url: 'https://github.com/AAKASHDEEP786/3-Tier-DevSecOps-Mega-Project.git'
             }
         }
         
