@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'docker-build-deploy', url: 'https://github.com/jaiswaladi246/3-Tier-DevSecOps-Mega-Project.git'
+                git branch: 'docker-build-deploy', url: 'https://github.com/AAKASHDEEP786/3-Tier-DevSecOps-Mega-Project.git'
             }
         }
         
@@ -65,9 +65,9 @@ pipeline {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
                         dir('api') {
-                            sh 'docker build -t adijaiswal/backend:latest .'
-                            sh 'trivy image --format table -o backend-image-report.html adijaiswal/backend:latest '
-                            sh 'docker push adijaiswal/backend:latest'
+                            sh 'docker build -t aakashdevops/backend:latest .'
+                            sh 'trivy image --format table -o backend-image-report.html aakashdevops/backend:latest '
+                            sh 'docker push aakashdevops/backend:latest'
                            
                         }
                     }
@@ -80,9 +80,9 @@ pipeline {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
                         dir('client') {
-                            sh 'docker build -t adijaiswal/frontend:latest .'
-                            sh 'trivy image --format table -o frontend-image-report.html adijaiswal/frontend:latest '
-                            sh 'docker push adijaiswal/frontend:latest'
+                            sh 'docker build -t aakashdevops/frontend:latest .'
+                            sh 'trivy image --format table -o frontend-image-report.html aakashdevops/frontend:latest '
+                            sh 'docker push aakashdevops/frontend:latest'
                         }
                     }
                 }
