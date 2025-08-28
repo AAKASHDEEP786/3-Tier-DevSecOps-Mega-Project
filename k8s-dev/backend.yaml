@@ -5,7 +5,7 @@ metadata:
   labels:
     app: backend
 stringData:
-  DB_PASSWORD: Aditya
+  DB_PASSWORD: Aakash
   JWT_SECRET: devopsShackSuperSecretKey
 ---
 apiVersion: v1
