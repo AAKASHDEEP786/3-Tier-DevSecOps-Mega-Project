@@ -6,7 +6,7 @@ metadata:
   labels:
     app: mysql
 stringData:
-  MYSQL_ROOT_PASSWORD: Aditya
+  MYSQL_ROOT_PASSWORD: Aakash
 
 ---
 apiVersion: v1
